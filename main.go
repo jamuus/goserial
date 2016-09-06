@@ -31,8 +31,8 @@ func main() {
 
 	fin := make(chan bool)
 
-	reader := bufio.NewReader(os.Stdin)
 	go func() {
+		reader := bufio.NewReader(os.Stdin)
 		for {
 			char, _, err := reader.ReadRune()
 			if err != nil {
